@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+<div>
+<h1>New User</h1>
+@model Survey
+<form asp-action="Create" asp-controller="Home" method="post">
+    <span asp-validation-for="Name"></span>
+    <label asp-for="Name"></label>
+    <input asp-for="Name">
+    <span asp-validation-for="Location"></span>
+    <label asp-for="Location"></label>
+    <input asp-for="Location">
+    <span asp-validation-for="Language"></span>
+    <label asp-for="Language"></label>
+    <input asp-for="Language">   
+    <span asp-validation-for="Comments"></span>
+    <label asp-for="Comments"></label>
+    <input asp-for="Comments">
+    <input value="Add User" type="submit">    
+</form>
+</div>
+</body>
+</html>
