@@ -8,7 +8,7 @@
 </head>
 <body>
 <div>
-<h1>New User</h1>
+<h1>New Survey</h1>
 @model Survey
 <form asp-action="Create" asp-controller="Home" method="post">
     <span asp-validation-for="Name"></span>
@@ -16,13 +16,23 @@
     <input asp-for="Name">
     <span asp-validation-for="Location"></span>
     <label asp-for="Location"></label>
-    <input asp-for="Location">
+    <select asp-for="Location">
+      <option value="San Jose">San Jose</option>
+      <option value="San Francisco">San Francisco</option>
+      <option value="Bellvue">Bellvue</option>
+      <option value="Irvine">Irvine</option>
+    </select>
     <span asp-validation-for="Language"></span>
     <label asp-for="Language"></label>
-    <input asp-for="Language">   
+    <select asp-for="Language">
+      <option value="C#">C#</option>
+        <option value="React">React</option>
+        <option value="Python">Python</option>
+        <option value="Java">Java</option>
+    </select>
     <span asp-validation-for="Comments"></span>
     <label asp-for="Comments"></label>
-    <input asp-for="Comments">
+    <textarea asp-for="Comments" rows="4" cols="50" maxlength="200"></textarea>
     <input value="Add User" type="submit">    
 </form>
 </div>
